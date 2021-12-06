@@ -1,0 +1,433 @@
+/* google fonts: Dancing Script400 italize 700, Lora 400 700, Roboto 100 400 700 */
+
+:root {
+  --level1: #0b4619;
+  --level2: #00adb5;
+  --level3: #aad8d3;
+  --level4: #eeeeee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+h1 {
+  position: absolute;
+  top: 3rem;
+  left: 1rem;
+  z-index: 1;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 5px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 5px black;
+}
+
+h2 {
+  font-family: 'Lobster', cursive;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p {
+  line-height: 2;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  font-size: 0.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+/* custom classes: like bootstrap */
+.dark-section {
+  background-color: var(--level1);
+  color: #fff;
+}
+
+.light-section {
+  background-color: #fff;
+  color: var(--level1);
+}
+
+.dark-section,
+.light-section {
+  padding: 3rem 0;
+}
+
+.inner-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+/* NAV SECTION */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 0 !important;
+  box-shadow: 0px 10px 10px var(--level4);
+}
+
+nav .inner-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border: 3px solid green;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bars {
+  margin: 0 0 0 auto;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  display: none;
+}
+
+.bars:hover {
+  background-color: rgb(200, 200, 200);
+  color: var(--level1);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  display: block;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: var(--level1);
+  background-color: white;
+}
+
+.active {
+  color: var(--level1);
+  background-color: white;
+}
+/* HEADER */
+
+header {
+  margin-top: 3rem;
+}
+#home .inner-container {
+  position: relative;
+  width: 80%;
+}
+#home.dark-section,
+#home.light-section {
+  padding: 0;
+  background-color: black;
+}
+
+header .inner-container {
+  position: relative;
+}
+
+#home img {
+  height: auto;
+  aspect-ratio: 9/5;
+}
+
+#home p {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 3rem;
+  opacity: 0.7;
+}
+
+/* ABOUT US */
+
+#about-us p {
+  margin-bottom: 1.3rem;
+}
+
+#about-us span {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+  color: rgb(243, 239, 7);
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* GALLERY SECTION */
+
+/* large img  */
+#gallery .large-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 20/7;
+  overflow: hidden;
+  position: relative;
+}
+
+#gallery .large-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gallery .caption-text {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+/* thumbnail images */
+#gallery .col {
+  flex: 1;
+}
+
+#gallery .col img {
+  height: auto;
+  aspect-ratio: 3/2;
+  opacity: 0.7;
+}
+
+#gallery .col img:hover {
+  opacity: 1;
+}
+
+/* change with javascript  */
+/* default: first thumnail img have .active {opacity: 1} */
+.active-thumbnail {
+  opacity: 1 !important;
+}
+
+/* THE SPACE SECTION */
+#the-space .row,
+#amenities .row {
+  justify-content: space-around;
+  font-size: 1rem;
+}
+#the-space span,
+#amenities span {
+  margin-left: 1rem;
+}
+/* AMENITIES */
+
+/* TESTIMONIALS SECTION */
+
+#testimonials .testimonials-container {
+  display: flex;
+}
+
+#testimonials .testimonial-box .testimonial-img {
+  flex: 2;
+}
+#testimonials .testimonial-box .testimonial-text {
+  flex: 5;
+}
+
+#testimonials .testimonial-box .testimonial-img {
+  display: flex;
+}
+
+#testimonials .testimonial-box .testimonial-img img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+#testimonials .testimonial-box .testimonial-img p {
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+
+#testimonials p.testimonial-text {
+  font-size: 0.9rem;
+  text-indent: 15px;
+}
+
+#testimonials p.testimonial-text span {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.5rem;
+  color: rgb(243, 239, 7);
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* 
+moving quotes from text x amount of pixels 
+Not shore what I just typed.
+Just foooooooling around with code. 
+*/
+#testimonials svg:nth-of-type(1) {
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+#testimonials svg:nth-of-type(2) {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+/* CONTACT SECTION */
+
+#contact {
+  font-weight: 700;
+}
+
+#contact .row {
+  justify-content: space-between;
+}
+
+#contact h2 {
+  text-align: left;
+}
+
+#contact .col:nth-of-type(1) {
+  width: 60%;
+}
+
+#contact .col:nth-of-type(2) {
+  width: 40%;
+}
+
+#contact svg {
+  margin-right: 1rem;
+}
+
+#contact span {
+  font-weight: 400;
+}
+
+/* FOOTER SECTION */
+footer {
+  padding: 1rem 0 7rem !important;
+  text-align: center;
+}
+
+footer .social-icons ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer .social-icons ul li {
+  margin: 0.5rem;
+}
+
+footer .social-icons a {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+footer .social-icons a:hover {
+  opacity: 1;
+}
+
+footer p {
+  opacity: 0.7;
+}
+
+footer span {
+  padding: 0;
+}
+
+/* @media */
+
+@media only screen and (max-width: 992px) {
+  .inner-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  #home .inner-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  #testimonials .testimonial-box {
+    flex-direction: column;
+  }
+
+  #testimonials .testimonial-box .testimonial-img {
+    margin-bottom: 3rem;
+  }
+
+  #contact .row {
+    flex-direction: column;
+  }
+
+  #contact h2 {
+    text-align: center;
+    display: block;
+  }
+
+  #contact .col:nth-of-type(1) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #contact .col:nth-of-type(2) {
+    width: 100%;
+  }
+}
